@@ -5,16 +5,16 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './components/users/users.module';
 import {  DATABASE_HOST, DATABASE_NAME, DATABASE_PASSWORD, DATABASE_USER } from './config/constant';
 import { ProductsModule } from './components/products/products.module';
-import { AuthModule } from './components/auth/auth.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import "reflect-metadata";
 import { ProjetsModule } from './components/projets/projets.module';
 import * as ormconfig from 'src/ormconfig';
 import { connectionSource } from './config/datasource';
+import { UsersModule } from './components/users/users.module';
+import { AuthModule } from './components/auth /auth.module';
 
 export function DatabaseOrmModule(): DynamicModule {
   // we could load the configuration from dotEnv here,

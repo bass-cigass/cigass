@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // "target": "esnext",
+    "moduleResolution": "Node",
     "module": "CommonJS",
     "declaration": true,
     "removeComments": true,
@@ -18,5 +18,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
+    
   }
+  
 }

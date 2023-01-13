@@ -1,12 +1,12 @@
+ import typeorm from "typeorm"; 
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
-const orm = require("typeorm");
  
-export class ProduitMigration1673544860334 implements MigrationInterface {
+export class ProduitMigration1673544860334 implements typeorm.MigrationInterface {
     name = 'ProduitMigration1673544860334';
-    
-    public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.createTable(new Table({
+
+    public async up(queryRunner: typeorm.QueryRunner): Promise<void> {
+        await queryRunner.createTable(new typeorm.Table({
             name: "products",
             columns: [
                 {
@@ -67,7 +67,7 @@ export class ProduitMigration1673544860334 implements MigrationInterface {
         }), true)
     }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {
+    public async down(queryRunner: typeorm.QueryRunner): Promise<void> {
         await queryRunner.dropTable("products");
     }
 

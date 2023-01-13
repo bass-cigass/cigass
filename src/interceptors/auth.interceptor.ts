@@ -1,6 +1,6 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nestjs/common";
 import { Observable } from "rxjs";
-import { AuthService } from "src/components/auth/auth.service";
+import { AuthService } from "src/components/auth /auth.service";
 import { UsersService } from "src/components/users/users.service";
 
 @Injectable()
