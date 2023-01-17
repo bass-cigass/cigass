@@ -18,7 +18,8 @@ export class CreateUserDto {
       @IsNotEmpty()
       @IsString()
       prenom: string;
-    
+  
+
       @ApiProperty({
         description: 'The tel of the User',
         example: '772345798',
@@ -43,7 +44,7 @@ export class CreateUserDto {
       @Length(8, 24)
       @Matches(REGEX.PASSWORD_RULE, { message: MESSAGES.PASSWORD_RULE_MESSAGE })
       mdp: string;
-    
+
       @ApiProperty({
         description: 'Confirm the password',
         example: 'Password@123',
@@ -52,4 +53,6 @@ export class CreateUserDto {
       @Length(8, 24)
       @Matches(REGEX.PASSWORD_RULE, { message: MESSAGES.PASSWORD_RULE_MESSAGE })
       confirm: string;
+
+
 }

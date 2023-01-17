@@ -1,5 +1,4 @@
 {
-  "type": "commonjs",
   "main": "dist/index.js",
   "name": "cigass-stock-backend",
   "version": "0.0.1",

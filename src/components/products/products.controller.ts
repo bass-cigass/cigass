@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, HttpStatus, Res, Use
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-import { JwtAuthGuard } from '../auth/strategy/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth /strategy/jwt-auth.guard';
 
 @Controller('products')
 export class ProductsController {

@@ -38,6 +38,14 @@ export class UsersService {
     return ;
   }
 
+  async findByEmail(email: string) {
+    return await User.findOne({
+      where: {
+        email: email,
+      },
+    });
+  }
+  
   async remove(id: number) {
     return await this.userRepository.delete(id);
 
