@@ -1,7 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { padNumber } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { Utilisateur } from 'app/models/utilisateur';
 import { UsersService } from 'app/services/users.service';
 import Swal from 'sweetalert2'
@@ -17,21 +16,23 @@ export class ListUtilisateursComponent implements OnInit {
 
   utilisateurs : any;
   usr = new Utilisateur;
-  dataSource !: Utilisateur [];
+
+  
   
   //utilisateurs = {};
   loadingIndicator = true;
   reorderable = true;
   constructor(private activatedRoute : ActivatedRoute, private userService: UsersService, private route :Router) {    this.findAll();    }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void { 
   }
+
+  
 
   findAll(){
     this.userService.findAll().subscribe((res: any) => {
       this.utilisateurs = res;
-    })
+    });
   
   }
 

@@ -1,0 +1,60 @@
+<div class="container-fluid mt--7">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow">
+                <div class="card-header border-0">
+                    <h4 class="card-title"> Liste des produits</h4>
+                    <button type="button" class="btn btn-warning pull-right" (click)="addProduit()">Ajouter</button>
+                </div>
+                
+                    <ngx-datatable class="bootstrap no-detail-row" [headerHeight]="40" [summaryRow]="true"
+                        [summaryPosition]="'bottom'" class="material" [rows]="produits" [columnMode]="'force'"
+                        [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="15" [scrollbarH]="true"
+                        rowHeight="auto" [scrollbarH]="true">
+                        <ngx-datatable-column name="#" prop="id">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Reference " prop="ref">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Libelle" prop="libelle">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Quantité" prop="quantite">
+                        </ngx-datatable-column>
+
+                        <ngx-datatable-column name="Seuil" prop="seuil">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Unité" prop="unite">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Date d'entrée" prop="date_entree">
+                        </ngx-datatable-column>
+
+                        <!-- <ngx-datatable-column name="Type de produit" prop="typeId">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Emplacement" prop="emplacementId">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Projet" prop="projetId">
+                        </ngx-datatable-column> -->
+
+                        <ngx-datatable-column name="Date d'expiration" prop="date_exp">
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Action" prop="id" [width]="50">
+                            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                <div class="d-flex">
+                                    &nbsp;
+                                    <a class="p-0" style="color: red; size: 10px;" data-original-title=""
+                                        (click)="suppress()">
+                                        <i class='fas fa-trash'></i>
+                                    </a>
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    <a class="p-0" style="color: green; size: 10px;" data-original-title="" href="">
+                                        <i class="fa-solid fa-pen-to-square"></i></a>
+                                </div>
+                            </ng-template>
+                        </ngx-datatable-column>
+                    </ngx-datatable>
+            </div>
+        </div>
+
+    </div>
+</div>

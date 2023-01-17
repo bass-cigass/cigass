@@ -15,9 +15,12 @@ import { NotificationsComponent }   from '../../pages/notifications/notification
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 import {    NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ListUtilisateursComponent } from 'app/pages/users/list-utilisateurs/list-utilisateurs.component';
+import { ListUtilisateursComponent } from 'app/pages/utilisateurs/list-utilisateurs/list-utilisateurs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from 'app/services/users.service';
+import { ProduitsService } from 'app/services/produits.service';
+import { ProjetService } from 'app/services/projet.service';
+import { MagasinService } from 'app/services/magasin.service';
 
 @NgModule({
   imports: [
@@ -41,7 +44,7 @@ import { UsersService } from 'app/services/users.service';
     NotificationsComponent,
     
   ],
-  providers: [UsersService]
+  providers: [UsersService, ProduitsService, ProjetService, MagasinService]
 })
 
 export class AdminLayoutModule {}
