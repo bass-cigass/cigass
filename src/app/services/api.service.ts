@@ -13,7 +13,7 @@ export class ApiService {
   API_SERVER = "http://localhost:3000";
 
   public readUser(){
-    return this.httpClient.get<Utilisateur[]>(`http://localhost:3000/utilisateur/listAll`);
+    return this.httpClient.get<Utilisateur[]>(`http://localhost:3000/users/listAll`);
   }
 
   public readUserId(id: Number){

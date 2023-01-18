@@ -1,0 +1,35 @@
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/scss" href="login.component.scss">
+</head>
+
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+		<div class="signup">
+			<form [formGroup]="" (ngSubmit)="signUp()">
+				<label for="chk" aria-hidden="true">Sign up</label>
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="text" name="txt"
+					placeholder="Nom" required="true">
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="text" name="txt"
+					placeholder="Prenom" required="true">
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="text" name="txt"
+					placeholder="Téléphone" required="true">
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="email" name="email"
+					placeholder="Email" required="true">
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="password" name="mdp"
+					placeholder="Mot de passe" required="">
+				<input class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" type="password" name="mdp"
+					placeholder="Confirmez le mot de passe" required="">
+				<button type="submit">Sign up</button>
+			</form>
+		</div>
+		<div class="login">
+			<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+				<label for="chk" aria-hidden="true">Login</label>
+				<input class="form-control" id="email" type="email" formControlName="email" placeholder="Email" required="">
+				<input class="form-control" id="mdp" type="password"  formControlName="mdp" placeholder="Mot de passe" required="">
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>

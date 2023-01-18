@@ -20,7 +20,7 @@ export class UsersService {
   }
 
   addUser(usr: Utilisateur): Observable <Utilisateur>{
-    return this.http.post(`http://localhost:3000/utilisateur/create`, usr).pipe(
+    return this.http.post(`http://localhost:3000/users/createUser`, usr).pipe(
       map((res : any )=>{
         return res;
       })

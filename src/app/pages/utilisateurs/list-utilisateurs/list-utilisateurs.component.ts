@@ -27,9 +27,7 @@ export class ListUtilisateursComponent implements OnInit {
   ngOnInit(): void { 
   }
 
-  
-
-  findAll(){
+    findAll(){
     this.userService.findAll().subscribe((res: any) => {
       this.utilisateurs = res;
     });
