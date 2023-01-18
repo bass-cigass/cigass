@@ -14,8 +14,8 @@ export class LoginService {
   // }
 
   // login
-  authLogin(email: string, mdp: string) {
-    return this.http.post<any>(`http://localhost:3000/auth/login`, { email, mdp })
+   authLogin(email: string, mdp: string) {
+    return  this.http.post<any>(`http://localhost:3000/auth/login`, { email, mdp })
       .pipe(
         map(
           data => {

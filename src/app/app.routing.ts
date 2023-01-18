@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { SamplerUserLayoutComponent } from './layouts/sampler-user-layout/sampler-user-layout.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const AppRoutes: Routes =[
   {
@@ -13,6 +14,10 @@ const AppRoutes: Routes =[
     redirectTo: 'login',
     pathMatch: 'full',
   },
+//  {
+//   path: 'dashboard',
+//   component: DashboardComponent,
+//  },
    {
     path: 'adminPlatform',
     component: AdminLayoutComponent,
@@ -42,7 +47,11 @@ const AppRoutes: Routes =[
         loadChildren: () => import('app/layouts/auth-layout/auth-layout.module').then(m => m.AuthLayoutModule)
       }
     ]
-   }
+   },
+  //  {
+  //   path: '**',
+  //   redirectTo: 'login'
+  // }
   // , {
   //   path: '',
   //   component:LoginComponent,
@@ -58,7 +67,6 @@ const AppRoutes: Routes =[
       useHash: true,
     })
   ],
-  exports: [RouterModule
-  ],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

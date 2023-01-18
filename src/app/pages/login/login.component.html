@@ -25,11 +25,11 @@
 			</form>
 		</div>
 		<div class="login">
-			<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<form  [formGroup]="loginForm" (ngSubmit)="onLogin()">
 				<label for="chk" aria-hidden="true">Login</label>
 				<input class="form-control" id="email" type="email" formControlName="email" placeholder="Email" required="">
 				<input class="form-control" id="mdp" type="password"  formControlName="mdp" placeholder="Mot de passe" required="">
-				<button type="submit">Login</button>
+				<button  type="submit">Login</button>
 			</form>
 		</div>
 	</div>

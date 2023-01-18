@@ -13,11 +13,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { SamplerUserLayoutComponent } from './layouts/sampler-user-layout/sampler-user-layout.component';
-import { AppRoutingModule } from "./app.routing";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { LoginComponent } from "./pages/login/login.component";
-import { RegisterComponent } from "./pages/register/register.component";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from "./app.routing";
 
 
 @NgModule({
@@ -34,9 +33,9 @@ import { HttpClientModule } from "@angular/common/http";
     //   useHash: true
     // }),
     HttpClientModule,
-    AppRoutingModule,
     SidebarModule,
     NavbarModule,
+    AppRoutingModule,
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
